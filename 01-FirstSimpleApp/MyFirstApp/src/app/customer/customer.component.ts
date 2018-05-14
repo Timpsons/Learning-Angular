@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Customer } from '../../domain/customer'
+import { CUSTOMERS } from '../../domain/mock-customers';
 
 @Component({
   selector: 'app-customer',
@@ -7,10 +7,7 @@ import { Customer } from '../../domain/customer'
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent implements OnInit {
-  customer: Customer = {
-      id: 666,
-      name: 'Mr. Winterbottom'
-  }
+  customers = CUSTOMERS;
 
   constructor() { }
 

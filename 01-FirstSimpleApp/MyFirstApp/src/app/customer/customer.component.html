@@ -1,7 +1,6 @@
-<h2>{{ customer.name | uppercase }}</h2>
-<div><span>ID: </span>{{ customer.id }}</div>
-<div>
-    <label>Name:
-        <input [(ngModel)]="customer.name" placeholder="Customer Name">
-    </label>
-</div>
+<h2>My Beloved Customers</h2>
+<ul class="customers">
+    <li *ngFor="let customer of customers">
+        <span class="badge">{{customer.id}}</span> {{customer.name}}
+    </li>
+</ul>
